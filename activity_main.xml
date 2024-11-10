@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#673AB7"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="330dp"
+        android:text=""
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextUname"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_below="@id/editTextPassword"
+        android:backgroundTint="#2196F3"
+        android:radius="303dp"
+        android:rotationX="2"
+        android:text="LOGIN"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewReg"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:baselineAligned="false"
+        android:text="new user? Register here."
+        android:textAlignment="center"
+        android:textColor="#1E89DE"
+        android:textSize="16sp" />
+
+
+</LinearLayout>
