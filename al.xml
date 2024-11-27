@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp">
+<!-- TextView to display the lifecycle state -->
+<TextView
+android:id="@+id/lifecycleStateText"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Activity Lifecycle State"
+android:textSize="18sp"
+android:textAlignment="center"
+android:layout_marginBottom="16dp"/>
+<!-- Button for onCreate -->
+<Button
+android:id="@+id/onCreateButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Simulate onCreate" />
+<!-- Button for onStart -->
+<Button
+android:id="@+id/onStartButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Simulate onStart" />
+<!-- Button for onResume -->
+<Button
+android:id="@+id/onResumeButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Simulate onResume" />
+<!-- Button for onPause -->
+<Button
+android:id="@+id/onPauseButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Simulate onPause" />
+<!-- Button for onStop -->
+<Button
+android:id="@+id/onStopButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Simulate onStop" />
+<!-- Button for onDestroy -->
+<Button
+android:id="@+id/onDestroyButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Simulate onDestroy" />
+<!-- Button for onRestart -->
+<Button
+android:id="@+id/onRestartButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Simulate onRestart" />
+</LinearLayout>

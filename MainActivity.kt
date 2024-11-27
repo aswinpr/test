@@ -1,12 +1,6 @@
-package com.example.loginpage
+package com.example.counter
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,46 +11,32 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.loginpage.ui.theme.LoginPageTheme
+import com.example.counter.ui.theme.CounterTheme
+import android.widget.TextView
+import android.widget.Button
+
 
 class MainActivity : ComponentActivity() {
-    private lateinit var username:EditText
-    private lateinit var password:EditText
-    private lateinit var loginbtn:Button
 
-    private val validUsername="user"
-    private var validPassword="pass123"
-
-    @SuppressLint("MissingInflatedId")
+    private var counter = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.main_activity)
 
-        username = findViewById(R.id.editTextUname)
-        password = findViewById(R.id.editTextPassword)
-        loginbtn = findViewById(R.id.loginbtn)
+        val counterTextView: TextView = findViewById(R.id.counterTextView)
+        val incrementbtn: Button = findViewById(R.id.incrementbtn)
+        val decrementbtn: Button = findViewById(R.id.decrementbtn)
 
-        loginbtn.setOnClickListener{
-            val uname = username.text.toString()
-            val pass = password.text.toString()
-            if(uname == validUsername && pass == validPassword){
-                Toast.makeText(this,"Login successful",Toast.LENGTH_SHORT).show()
-
-
-                val intent = Intent(this, home::class.java)
-                startActivity(intent)
-            }
-            else{
-                Toast.makeText(this,"login failed",Toast.LENGTH_SHORT).show()
-            }
+        incrementbtn.setOnClickListener{
+            counter++
+            counterTextView.text = counter.toString()
         }
 
-        val regact = findViewById<TextView>(R.id.textViewReg)
-        regact.setOnClickListener{
-            val intent = Intent(this,reg::class.java)
-            startActivity(intent)
-
+        decrementbtn.setOnClickListener{
+            counter--
+            counterTextView.text = counter.toString()
         }
+
 
     }
 }
